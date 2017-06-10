@@ -13,3 +13,7 @@ resource "aws_volume_attachment" "ebs_att" {
   volume_id   = "${aws_ebs_volume.ebslogsofdev2.id}"
   instance_id = "${var.INSTANCEID}"
 }
+
+output "ebslogsofdev2" {
+   value = "${aws_ebs_volume.ebslogsofdev2.id}"
+   }
